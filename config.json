@@ -1,0 +1,87 @@
+{
+  "game": {
+    "title": "LlamaQuest",
+    "version": "0.1.0",
+    "default_level": "village",
+    "save_directory": "~/llamaquest/saves"
+  },
+  "display": {
+    "width": 160,
+    "height": 120,
+    "scale": 4,
+    "fullscreen": false,
+    "fps": 60,
+    "vsync": true
+  },
+  "audio": {
+    "music_volume": 0.7,
+    "sfx_volume": 0.8,
+    "mute": false
+  },
+  "controls": {
+    "keyboard": {
+      "up": "UP",
+      "down": "DOWN",
+      "left": "LEFT",
+      "right": "RIGHT",
+      "interact": "SPACE",
+      "inventory": "I",
+      "menu": "ESC",
+      "attack": "Z",
+      "special": "X"
+    },
+    "gamepad": {
+      "enabled": true,
+      "up": "DPAD_UP",
+      "down": "DPAD_DOWN",
+      "left": "DPAD_LEFT",
+      "right": "DPAD_RIGHT",
+      "interact": "A",
+      "inventory": "Y",
+      "menu": "START",
+      "attack": "B",
+      "special": "X"
+    }
+  },
+  "player": {
+    "starting_health": 100,
+    "starting_energy": 100,
+    "movement_speed": 1.5,
+    "starting_inventory": [
+      {
+        "id": "health_potion",
+        "quantity": 3
+      },
+      {
+        "id": "basic_sword",
+        "quantity": 1
+      }
+    ]
+  },
+  "ai": {
+    "npc_count": 10,
+    "enemy_difficulty": "normal",
+    "npc_memory": true,
+    "adaptive_behavior": true
+  },
+  "world": {
+    "day_night_cycle": true,
+    "day_length_minutes": 20,
+    "weather_effects": true,
+    "random_events": true,
+    "biomes": [
+      "forest",
+      "desert",
+      "mountains",
+      "swamp",
+      "village"
+    ]
+  },
+  "debug": {
+    "enabled": false,
+    "show_fps": true,
+    "invincible": false,
+    "show_collision": false,
+    "log_level": "info"
+  }
+} 
