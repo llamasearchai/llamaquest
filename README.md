@@ -4,7 +4,7 @@
 [![Rust](https://img.shields.io/badge/Rust-1.70+-orange.svg?logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Pyxel](https://img.shields.io/badge/Pyxel-1.9.x-red)](https://github.com/kitao/pyxel)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![CI/CD](https://img.shields.io/badge/CI/CD-passing-brightgreen)](https://github.com/llamasearch/llamaquest)
+[![CI/CD](https://img.shields.io/badge/CI/CD-passing-brightgreen)](https://llamasearch.ai
 
 <div align="center">
   <img src="docs/images/llamaquest_banner.png" alt="LlamaQuest Banner" width="800">
@@ -91,7 +91,7 @@ For more details on the architecture, see [ARCHITECTURE.md](docs/ARCHITECTURE.md
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/llamasearch/llamaquest.git
+   git clone https://llamasearch.ai
    cd llamaquest
    ```
 
