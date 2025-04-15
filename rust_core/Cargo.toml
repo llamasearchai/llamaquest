@@ -1,0 +1,22 @@
+[package]
+name = "llamaquest_core"
+version = "0.1.0"
+edition = "2021"
+authors = ["Nik Jois <nikjois@llamasearch.ai>"] ["Nik Jois <nikjois@llamasearch.ai>"] ["Nik Jois <nikjois@llamasearch.ai>"] ["Nik Jois <nikjois@llamasearch.ai>"] ["Nik Jois <nikjois@llamasearch.ai>"]
+description = "Performance-critical core for LlamaQuest game"
+readme = "../README.md"
+license = "MIT"
+
+[lib]
+name = "llamaquest_core"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.18.1", features = ["extension-module"] }
+
+[dev-dependencies]
+criterion = "0.4"
+
+[[bench]]
+name = "pathfinding_benchmark"
+harness = false 

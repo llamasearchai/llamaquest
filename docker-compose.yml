@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  game:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./saves:/app/saves
+    environment:
+      - DISPLAY=${DISPLAY}
+    network_mode: host
+    # This allows X11 forwarding for GUI applications
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./assets:/app/assets
+      - ./saves:/app/saves
+    command: ["--fullscreen"]
+
+  # Optional web server to serve the game in browser via WebAssembly
+  web:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./assets:/app/assets
+      - ./saves:/app/saves
+    depends_on:
+      - game
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
+
+  # Development environment with hot reloading
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./python:/app/python
+      - ./rust_core:/app/rust_core
+      - ./assets:/app/assets
+      - ./saves:/app/saves
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=${DISPLAY}
+      - PYTHONPATH=/app/python
+      - DEBUG=1
+    network_mode: host
+    command: ["python", "-m", "llamaquest", "--debug"]
+
+volumes:
+  saves:
+    driver: local 
